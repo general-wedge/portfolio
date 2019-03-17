@@ -1,0 +1,87 @@
+%logoImageBase {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 20px;
+  // padding: 20px;
+}
+
+.cSharp {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+
+  .outer2 {
+    fill: rgb(212, 93, 78);
+  }
+
+  .inner {
+    fill: rgb(254, 255, 254);
+  }
+}
+
+.jsStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+}
+
+.nodeStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+}
+
+.javaStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+}
+
+.dotNetStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+}
+
+.reactStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+}
+
+.angularStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+
+  .outer2 {
+    fill: rgb(212, 93, 78);
+  }
+
+  .inner {
+    fill: rgb(254, 255, 254);
+  }
+}
+
+.graphqlStyles {
+  @extend %logoImageBase;
+
+  .outer {
+    fill: #ED6A5A;
+  }
+}

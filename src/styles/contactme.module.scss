@@ -1,0 +1,90 @@
+.contactMeWrapper {
+  overflow: hidden;
+  align-self: center;
+  justify-self: center;
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+}
+
+%linkWrapperBase {
+  height: 2em;
+  width: 2em;
+  opacity: 0;
+  float: left;
+}
+
+.githubWrapper {
+  animation: fadeInLogos 2s ease normal forwards;
+  @extend %hoverStyles;
+  @extend %linkWrapperBase;
+}
+
+.twitterWrapper {
+  animation: fadeInLogos 2s ease 0.3s normal forwards;
+  @extend %hoverStyles;
+  @extend %linkWrapperBase;
+}
+
+.linkedInWrapper {
+  animation: fadeInLogos 2s ease 0.7s normal forwards;
+  @extend %hoverStyles;
+  @extend %linkWrapperBase;
+}
+
+@keyframes fadeInLogos {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+%hoverStyles {
+  a {
+    svg {
+      path {
+        fill: #4EC8B9 !important;
+      }
+      &:hover path {
+        fill: #00798C !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 522px) {
+  .contactMeWrapper {
+    overflow: hidden;
+    grid-column: 1 / 3;
+    grid-row: 2;
+    align-self: start;
+    justify-self: start;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  .twitterWrapper {
+    margin-left: 2%;
+  }
+
+  .linkedInWrapper {
+    margin-left: 2%;
+  }
+
+  %linkWrapperBase {
+    height: 1.5em;
+    &:hover {
+      height: 1.7em;
+    }
+  }
+
+  .contactMeWrapper {
+    overflow: hidden;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    justify-self: start;
+  }
+}
