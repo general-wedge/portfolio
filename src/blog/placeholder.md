@@ -6,3 +6,5 @@ excerpt: "Blogs coming soon! Stay tuned."
 ---
 
 UNDER CONTSTRUCTION
+
+hey this is a blog

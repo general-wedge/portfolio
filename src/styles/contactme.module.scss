@@ -64,6 +64,34 @@
 }
 
 @media screen and (min-width: 800px) {
+  .contactMeWrapper {
+    overflow: hidden;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: start;
+    margin-left: 20%;
+  }
+
+  
+  .twitterWrapper {
+    margin-left: 5%;
+  }
+
+  .linkedInWrapper {
+    margin-left: 5%;
+  }
+
+  %linkWrapperBase {
+    height: 1.5em;
+    &:hover {
+      height: 1.7em;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
 
   .twitterWrapper {
     margin-left: 2%;

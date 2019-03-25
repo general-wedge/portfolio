@@ -90,6 +90,36 @@
 }
 
 @media screen and (min-width: 800px) {
+  .blogWrapper {
+    overflow: hidden;
+    display: grid;
+    width: 400px;
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    grid-row: 5;
+    align-self: start;
+    justify-self: start;
+  }
+
+  .blogSectionHeaderWrapper {
+    overflow: hidden;
+    grid-column: 2;
+    grid-row: 5;
+    align-self: start;
+    justify-self: start;
+    width: 425px;
+
+    .blogSectionHeader {
+      font-size: 2em;
+      color: #4EC8B9;
+      margin: 0;
+      float: left;
+      font-family: 'Inconsolata', monospace;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
   .blogSectionHeaderWrapper {
     overflow: hidden;
     grid-column: 3;

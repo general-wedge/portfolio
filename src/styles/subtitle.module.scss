@@ -37,6 +37,22 @@
     grid-column: 2;
     grid-row: 1;
     align-self: end;
+    justify-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .subtitle {
+    font-size: 2em;
+  }
+  .subtitleWrapper {
+    overflow: hidden;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
     justify-self: start;
     margin-top: 0;
     margin-bottom: 0;
