@@ -19,6 +19,16 @@ module.exports = {
         path: `${__dirname}/src/blog`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Nunito`,
+          },
+        ],
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     // {
