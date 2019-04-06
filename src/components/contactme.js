@@ -8,8 +8,8 @@ const ContactMe = () => (
     <GithubWrapper />
     <TwitterWrapper />
     <LinkedInWrapper />
-    <ResumeLink linkText="RESUME"/>
-    <WorkLink linkText="MY WORK" />
+    {/* <ResumeLink linkText="RESUME"/>
+    <WorkLink linkText="MY WORK" /> */}
   </div>
 )
 
