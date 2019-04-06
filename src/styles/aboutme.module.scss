@@ -9,7 +9,6 @@
   border-right: 2px solid transparent;
   color: #59595A;
   font-weight: 500;
-  font-family: 'Inconsolata', monospace;
 }
 
 .introWrapper {
@@ -64,7 +63,7 @@
     grid-column: 2;
     grid-row: 3;
     align-self: start;
-    justify-self: start;
+    justify-self: center;
     margin-left: 0;
   }
 

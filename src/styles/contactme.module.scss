@@ -66,14 +66,13 @@
 @media screen and (min-width: 800px) {
   .contactMeWrapper {
     overflow: hidden;
-    grid-column: 2;
-    grid-row: 2;
-    align-self: center;
-    justify-self: start;
-    margin-left: 20%;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    justify-self: center;
   }
 
-  
+
   .twitterWrapper {
     margin-left: 5%;
   }
@@ -94,11 +93,11 @@
 @media screen and (min-width: 1300px) {
 
   .twitterWrapper {
-    margin-left: 2%;
+    margin-left: 10%;
   }
 
   .linkedInWrapper {
-    margin-left: 2%;
+    margin-left: 10%;
   }
 
   %linkWrapperBase {
@@ -110,9 +109,10 @@
 
   .contactMeWrapper {
     overflow: hidden;
-    grid-column: 2;
-    grid-row: 2;
-    align-self: end;
+    grid-column: 4;
+    grid-row: 1;
+    align-self: start;
     justify-self: start;
+    margin-top: 30px;
   }
 }
