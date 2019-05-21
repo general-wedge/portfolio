@@ -1,12 +1,18 @@
-.workLinkWrapper {
-  animation: fadeInLinks 1s ease-out normal forwards;
-}
-
-.resumeLinkWrapper {
+.linkWrapper {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
   opacity: 0;
   animation: fadeInLinks 1s ease-out normal forwards;
 }
 
+.home {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+}
 
 @keyframes fadeInLinks{
   from { opacity: 0; }
@@ -19,11 +25,18 @@
 }
 
 @media screen and (min-width: 800px) {
-  .workLinkWrapper {
-    margin-left: 2%;
-    float: left;
+  .linkWrapper {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    justify-self: start;
+    height: 1.2em;
+    width: 2em;
+    opacity: 0;
+    margin-top: 20px;
     a {
       color: #4EC8B9;
+      font-size: 1.2em;
       font-weight: bold;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
@@ -33,20 +46,8 @@
       }
     }
   }
+}
 
-  .resumeLinkWrapper {
-    margin-left: 2%;
-    float: left;
-    a {
-      color: #4EC8B9;
-      font-weight: bold;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      text-decoration: none;
-      &:hover {
-        color: #00798C
-      }
-    }
-  }
+@media screen and (min-width: 1300px) {
 
 }

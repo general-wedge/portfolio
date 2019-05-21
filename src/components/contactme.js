@@ -3,17 +3,7 @@ import { GithubImage, TwitterImage, LinkedInImage } from './logos'
 import { WorkLink, ResumeLink } from './links'
 import styles from '../styles/contactme.module.scss'
 
-const ContactMe = () => (
-  <div className={styles.contactMeWrapper}>
-    <GithubWrapper />
-    <TwitterWrapper />
-    <LinkedInWrapper />
-    {/* <ResumeLink linkText="RESUME"/>
-    <WorkLink linkText="MY WORK" /> */}
-  </div>
-)
-
-const GithubWrapper = () => {
+ export const GithubWrapper = () => {
   return (
     <div className={styles.githubWrapper}>
       <GithubImage />
@@ -21,7 +11,7 @@ const GithubWrapper = () => {
   )
 }
 
-const TwitterWrapper = () => {
+export const TwitterWrapper = () => {
   return (
     <div className={styles.twitterWrapper}>
       <TwitterImage />
@@ -29,12 +19,10 @@ const TwitterWrapper = () => {
   )
 }
 
-const LinkedInWrapper = () => {
+export const LinkedInWrapper = () => {
   return (
     <div className={styles.linkedInWrapper}>
       <LinkedInImage />
     </div>
   )
 }
-
-export default ContactMe

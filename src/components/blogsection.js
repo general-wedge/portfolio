@@ -91,7 +91,7 @@ const BlogWrapper = () => {
 const BlogSection = () => (
   <>
     <div className={styles.blogSectionHeaderWrapper}>
-      <h3 className={styles.blogSectionHeader}>Developer Musings</h3>
+      <h3 className={styles.blogSectionHeader}>Tales From The Console</h3>
     </div>
     <BlogWrapper />
   </>

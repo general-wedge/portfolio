@@ -1,15 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-import styles from "../styles/links.module.scss"
 
-export const ResumeLink = ({ linkText }) => (
-  <div className={styles.resumeLinkWrapper}>
-    <Link to="/resume">{linkText}</Link>
-  </div>
-)
+/*
+  TODO: Fix styles - must be name 'styles', will need to move components around
+*/
+const RedirectLink = ({ link, linkText, specificClass }) => {
+  return (
+    <div className={specificClass}>
+      <Link to={link}>{linkText}</Link>
+    </div>
+  )
+}
 
-export const WorkLink = ({ linkText }) => (
-  <div className={styles.workLinkWrapper}>
-    <Link to="/work">{linkText}</Link>
-  </div>
-)
+
+export default RedirectLink

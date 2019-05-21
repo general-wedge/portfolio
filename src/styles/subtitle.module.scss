@@ -1,15 +1,14 @@
 .subtitleWrapper {
   overflow: hidden;
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
   align-self: end;
-  justify-self: start;
-  margin-left: 5%;
+  justify-self: center;
 }
 
 .subtitle {
   font-size: 1.5em;
-  color: #ED6A5A;
+  color: #F8FFF4;
   margin-bottom: 10px;
 }
 

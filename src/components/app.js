@@ -1,24 +1,47 @@
 import React from 'react';
-import styles from '../styles/app.module.scss';
+
+// Styling
+import appStyles from '../styles/app.module.scss';
+import styles from '../styles/links.module.scss';
 
 // Components
 import Title from './title'
 import Subtitle from './subtitle'
-import ContactMe from './contactme'
+import { GithubWrapper, LinkedInWrapper, TwitterWrapper } from './contactme'
 import AboutMe from './aboutme'
-import MyWork from './blogsection'
-import Experience from './experience'
+import RedirectLink from './links'
+import Projects from './projects'
 import SEO from './seo'
 
 const App = () => (
-  <div className={styles.App}>
-    <SEO title="Home" keywords={[`portfolio`, `blog`, `developer`, `software`]} />  
+  <div className={appStyles.App}>
+    <SEO title="Home" keywords={[`portfolio`, `blog`, `developer`, `software`]} />
+    <FirstBlockWrapper />
+    <SecondBlockWrapper />
+    <ThirdBlockWrapper /> 
+  </div>
+)
+
+const FirstBlockWrapper = () => (
+  <div className={appStyles.firstBlockWrapper}>
     <Title />
     <Subtitle />
-    <ContactMe />
+    <GithubWrapper />
+    <LinkedInWrapper/>
+    <TwitterWrapper />
+    <RedirectLink sepcificClass={styles.linkWrapper} link="/blog" linkText="Blog" />
+  </div>
+)
+
+const SecondBlockWrapper = () => (
+  <div className={appStyles.secondBlockWrapper}>
     <AboutMe />
-    <MyWork />
-    <Experience />
+  </div>
+)
+
+const ThirdBlockWrapper = () => (
+  <div className={appStyles.thirdBlockWrapper}>
+    <Projects />
   </div>
 )
 

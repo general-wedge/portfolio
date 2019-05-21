@@ -9,24 +9,82 @@
   background-color: rgb(254, 255, 254);
   font-family: 'Nunito', sans-serif;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20% 10% 25% 10% 25%; }
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+}
 
 @media screen and (min-width: 522px) {
-  .App {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; } }
+
+}
 
 @media screen and (min-width: 800px) {
-    .App {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr; } }
-
-@media screen and (min-width: 1300px) {
-  .App {
+  .firstBlockWrapper {
     display: grid;
-    // grid-template-columns: 10% 55% 25% 10%;
-    grid-template-columns: 0.5fr 1.2fr 1fr 0.3fr;
-    grid-template-rows: 0.4fr 1.5fr 1fr 1fr 1.5fr; } }
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/pawel-czerwinski-1475179-unsplash.jpg");
+    background-size: cover;
+  }
+
+  .secondBlockWrapper {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    height: 100vh;
+    width: 100%;
+    background-color: #484041;
+  }
+
+  .thirdBlockWrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+    height: 100vh;
+    width: 100%;
+    background-color: #0B2027;
+  }
+}
+
+@media screen and (min-width: 1300px) { 
+  .firstBlockWrapper {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/pawel-czerwinski-1475179-unsplash.jpg");
+    background-size: cover;
+  }
+  
+  .secondBlockWrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    height: 100vh;
+    width: 100%;
+    background-color: #484041;
+  }
+  
+  .thirdBlockWrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+    height: 100vh;
+    width: 100%;
+    background-color: #0B2027;
+  }
+}
