@@ -1,21 +1,22 @@
 .titleWrapper {
   overflow: hidden;
-  align-self: center;
+  align-self: end;
   justify-self: center;
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
-  margin-top: 25px;
+  margin-bottom: 2rem;
 }
 
 .title {
-  font-size: 2.5em;
-  color: #F8FFF4;
+  font-size: 3rem;
+  color: #fdfed4;
   margin: 0;
 }
 
 @media screen and (min-width: 522px) {
   .title {
-    font-size: 4em; }
+    font-size: 4em;
+  }
   .titleWrapper {
     overflow: hidden;
     grid-column: 1 / 3;

@@ -1,22 +1,22 @@
-%linkWrapperBase {
-  grid-column: 2;
+%socialLinkWrapperBase {
+  grid-column: 1;
   grid-row: 1;
   align-self: center;
   justify-self: end;
   height: 1.2em;
   width: 2em;
   opacity: 0;
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 
-%hoverStyles {
+%svgHoverStyles {
   a {
     svg {
       path {
         fill: #fdfed4 !important;
       }
       &:hover path {
-        fill: #00798C !important;
+        fill: rgb(50, 206, 206) !important;
       }
     }
   }
@@ -24,37 +24,29 @@
 
 .githubWrapper {
   margin-right: 80px;
-  animation: fadeInLogos 2s ease normal forwards;
-  @extend %hoverStyles;
-  @extend %linkWrapperBase;
+  animation: fadeInSocialLogos 2s ease 0.3s normal forwards;
+  @extend %svgHoverStyles;
+  @extend %socialLinkWrapperBase;
 }
 
 .twitterWrapper {
   margin-right: 40px;
-  animation: fadeInLogos 2s ease 0.3s normal forwards;
-  @extend %hoverStyles;
-  @extend %linkWrapperBase;
+  animation: fadeInSocialLogos 2s ease 0.7s normal forwards;
+  @extend %svgHoverStyles;
+  @extend %socialLinkWrapperBase;
 }
 
 .linkedInWrapper {
-  animation: fadeInLogos 2s ease 0.7s normal forwards;
-  @extend %hoverStyles;
-  @extend %linkWrapperBase;
+  animation: fadeInSocialLogos 2s ease 1.1s normal forwards;
+  @extend %svgHoverStyles;
+  @extend %socialLinkWrapperBase;
 }
-
-
-@keyframes fadeInLogos {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
 
 @media screen and (min-width: 522px) {
-
 }
 
 @media screen and (min-width: 800px) {
-  %linkWrapperBase {
+  %socialLinkWrapperBase {
     grid-column: 3;
     grid-row: 1;
     height: 1.5em;
@@ -64,9 +56,8 @@
   }
 }
 
-
 @media screen and (min-width: 1300px) {
-  %linkWrapperBase {
+  %socialLinkWrapperBase {
     grid-column: 3;
     grid-row: 1;
     height: 1.5em;
@@ -79,13 +70,22 @@
   .githubWrapper {
     margin-right: 120px;
   }
-  
+
   .twitterWrapper {
     margin-left: 40px;
     margin-right: 80px;
   }
-  
+
   .linkedInWrapper {
     margin-right: 40px;
+  }
+}
+
+@keyframes fadeInSocialLogos {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -7,9 +7,23 @@
   margin-top: 1%;
   width: 100%;
   border-right: 2px solid transparent;
-  color: #F8FFF4;
-  font-family: 'Nunito', sans-serif;
+  color: #f8fff4;
+  font-family: "Nunito", sans-serif;
   font-weight: bold;
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: #4c5f6b;
+  margin: 0rem 0.2rem 0rem 0.2rem;
+  &:hover,
+  :active {
+    color: rgb(50, 206, 206);
+  }
+
+  &:focus {
+    color: rgb(50, 206, 206);
+  }
 }
 
 %openingBase {
@@ -20,8 +34,8 @@
   font-size: 2em;
   margin-top: 1%;
   border-right: 2px solid transparent;
-  color: #F8FFF4;
-  font-family: 'Nunito', sans-serif;
+  color: #f8fff4;
+  font-family: "Nunito", sans-serif;
   font-weight: bold;
 }
 
@@ -29,9 +43,9 @@
   grid-column: 2;
   grid-row: 2;
   align-self: start;
-  justify-self: center;
+  justify-self: start;
   padding: 1%;
-  @extend %aboutMeBase
+  @extend %aboutMeBase;
 }
 
 .openingWrapper {

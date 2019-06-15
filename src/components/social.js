@@ -1,9 +1,9 @@
-import React from 'react'
-import { GithubImage, TwitterImage, LinkedInImage } from './logos'
-import { WorkLink, ResumeLink } from './links'
-import styles from '../styles/contactme.module.scss'
+import React from "react"
+import { GithubImage, TwitterImage, LinkedInImage } from "./logos"
+import { WorkLink, ResumeLink } from "./links"
+import styles from "../styles/social.module.scss"
 
- export const GithubWrapper = () => {
+export const GithubWrapper = () => {
   return (
     <div className={styles.githubWrapper}>
       <GithubImage />

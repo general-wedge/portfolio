@@ -1,31 +1,44 @@
-.linkWrapper {
-  grid-column: 3;
+%linkWrapperBaseStyles {
+  grid-column: 1;
   grid-row: 1;
   align-self: center;
-  justify-self: center;
+  justify-self: start;
   opacity: 0;
-  animation: fadeInLinks 1s ease-out normal forwards;
+  text-decoration: none;
+  color: #fdfed4;
+  &:hover {
+    fill: rgb(50, 206, 206);
+  }
 }
 
-.home {
+.blogWrapper {
+  animation: fadeInLinks 2s ease normal forwards;
+  margin: 0rem 0rem 0rem 0.5rem;
+  @extend %linkWrapperBaseStyles;
+}
+
+.homeWrapper {
   grid-column: 1;
   grid-row: 1;
   align-self: center;
   justify-self: center;
+  @extend %linkWrapperBaseStyles;
 }
 
-@keyframes fadeInLinks{
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeInLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
 
 @media screen and (min-width: 522px) {
-
 }
 
 @media screen and (min-width: 800px) {
-  .linkWrapper {
+  %linkWrapperBaseStyles {
     grid-column: 3;
     grid-row: 1;
     align-self: center;
@@ -35,19 +48,18 @@
     opacity: 0;
     margin-top: 20px;
     a {
-      color: #4EC8B9;
+      color: #4ec8b9;
       font-size: 1.2em;
       font-weight: bold;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
       text-decoration: none;
       &:hover {
-        color: #00798C
+        color: #00798c;
       }
     }
   }
 }
 
 @media screen and (min-width: 1300px) {
-
 }

@@ -1,7 +1,7 @@
 .blogGrid {
   display: grid;
   grid-template-columns: 0.3fr 1fr 0.3fr;
-  grid-template-rows: 0.3 fr1fr;
+  grid-template-rows: 0.3fr 1fr;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -32,18 +32,18 @@
       font-size: 1.2em;
       a {
         text-decoration: none;
-        color: #4EC8B9;
+        color: #4ec8b9;
       }
     }
 
     small {
-      color: #EDAE49;
+      color: #edae49;
     }
 
     p {
       margin-top: 15px;
       margin-bottom: 0;
-      color: #ED6A5A;
+      color: #ed6a5a;
       font-size: 0.8em;
     }
   }
@@ -66,14 +66,14 @@
 
   .blogSectionHeader {
     font-size: 3em;
-    font-family: 'Arimo', sans-serif;
-    color: #ED6A5A;
+    font-family: "Arimo", sans-serif;
+    color: #ed6a5a;
     margin: 0;
   }
 
   small {
     font-size: 0.8em;
-    color: #ED6A5A;
+    color: #ed6a5a;
     margin-left: 5%;
     width: 200px;
   }
@@ -90,7 +90,6 @@
 }
 
 @media screen and (min-width: 522px) {
-
 }
 
 @media screen and (min-width: 800px) {
@@ -115,7 +114,7 @@
 
     .blogSectionHeader {
       font-size: 2em;
-      color: #4EC8B9;
+      color: #4ec8b9;
       margin: 0;
       float: left;
     }
@@ -134,9 +133,9 @@
 
     .blogSectionHeader {
       font-size: 2em;
-      color: #4EC8B9;
+      color: #4ec8b9;
       margin: 0;
-      float: left;;
+      float: left;
     }
   }
 
@@ -172,20 +171,20 @@
         font-size: 1.5em;
         a {
           text-decoration: none;
-          color: #ED6A5A;
+          color: #ed6a5a;
           &:hover {
-            color: #4EC8B9;
+            color: #4ec8b9;
           }
         }
       }
 
       small {
-        color: #5F5AA2;
+        color: #5f5aa2;
       }
 
       p {
         margin-bottom: 0;
-        color: #59595A;
+        color: #59595a;
         font-size: 1em;
         font-weight: bold;
       }

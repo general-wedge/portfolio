@@ -1,16 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
-/*
-  TODO: Fix styles - must be name 'styles', will need to move components around
-*/
-const RedirectLink = ({ link, linkText, specificClass }) => {
+const RedirectLink = ({ link, linkText, componentStyle }) => {
   return (
-    <div className={specificClass}>
-      <Link to={link}>{linkText}</Link>
-    </div>
+    <>
+      <Link className={componentStyle} to={link}>
+        {linkText}
+      </Link>
+    </>
   )
 }
-
 
 export default RedirectLink

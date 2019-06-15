@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from '../styles/subtitle.module.scss'
+import React from "react"
+import styles from "../styles/subtitle.module.scss"
 
 const Subtitle = () => (
   <div className={styles.subtitleWrapper}>
