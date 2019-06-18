@@ -8,7 +8,7 @@ import styles from "../styles/links.module.scss"
 import Title from "./title"
 import Subtitle from "./subtitle"
 import { GithubWrapper, LinkedInWrapper, TwitterWrapper } from "./social"
-import AboutMe from "./aboutme"
+import { AboutMe, ParallaxImage } from "./aboutme"
 import RedirectLink from "./links"
 import Projects from "./projects"
 import SEO from "./seo"
@@ -32,6 +32,7 @@ const App = () => (
       />
     </SectionWrapper>
     <SectionWrapper componentStyle={appStyles.secondBlockWrapper}>
+      <ParallaxImage />
       <AboutMe />
     </SectionWrapper>
     <SectionWrapper componentStyle={appStyles.thirdBlockWrapper}>
