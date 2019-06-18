@@ -29,13 +29,13 @@ after_success:
   - echo "Connecting to production server..."
   - ssh -tt deploy@138.197.128.14 << EOF
   - echo "Connected to production server."
-  - cd unravel-api-gateway
+  - cd mulligan/mulligan-api
   - echo "Updating application..."
   - git pull origin master
   - npm install
   - echo "Application updated."
   - echo "Launching production server..."
-  - pm2 restart index.js
+  - pm2 restart mulligan-api
   - exit $?
   - EOF
   - echo "Production server started successfully."
