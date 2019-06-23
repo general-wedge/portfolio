@@ -177,21 +177,25 @@
       grid-column: 1;
       justify-self: start;
       align-self: start;
-      animation: slideIn 3s ease-in;
+      animation: slideIn 1s ease-in;
+      animation-fill-mode: both;
     }
 
     .haul {
       grid-column: 2;
       justify-self: start;
       align-self: start;
-      animation: slideIn 6s ease-in;
+
+      animation: slideIn 1s ease-in 1s;
+      animation-fill-mode: both;
     }
 
     .mulligan {
       grid-column: 3;
       justify-self: start;
       align-self: start;
-      animation: slideIn 8s ease-in;
+      animation: slideIn 1s ease-in 2s;
+      animation-fill-mode: both;
     }
   }
 }
