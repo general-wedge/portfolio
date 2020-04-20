@@ -78,31 +78,48 @@
     align-self: start;
     @extend %projectBaseStyles;
   }
+
+  .tdb {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    animation: slideIn 8s ease-in;
+    @extend %projectBaseStyles;
+  }
+
+  .temp1 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    animation: slideIn 8s ease-in;
+    @extend %projectBaseStyles;
+  }
+
+  .temp2 {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+    animation: slideIn 8s ease-in;
+    @extend %projectBaseStyles;
+  }
 }
 
 @keyframes slideIn {
   0% {
-    transform: skewX(53deg) translateX(-500px);
+    transform: translateX(-500px);
     opacity: 0;
   }
   60% {
     transform: translateX(0px);
   }
-  62% {
-    transform: skewX(0deg) translateX(30px);
-  }
   70% {
-    transform: skew(-20deg);
     opacity: 1;
   }
   80% {
-    transform: skew(0deg) translate(0);
-  }
-  90% {
-    transform: skew(-5deg);
-  }
-  100% {
-    transform: skew(0deg);
+    transform: translate(0);
   }
 }
 
@@ -132,18 +149,42 @@
       grid-column: 1;
       justify-self: start;
       align-self: start;
-      animation: slideIn 3s ease-in;
+      animation: slideIn 3s ease-in-out;
     }
 
     .haul {
       grid-column: 2;
       justify-self: start;
       align-self: start;
-      animation: slideIn 6s ease-in;
+      animation: slideIn 6s ease-in-out;
     }
 
     .mulligan {
       grid-column: 3;
+      justify-self: start;
+      align-self: start;
+      animation: slideIn 8s ease-in-out;
+    }
+
+    .tdb {
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: start;
+      align-self: start;
+      animation: slideIn 8s ease-in;
+    }
+
+    .temp1 {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: start;
+      align-self: start;
+      animation: slideIn 8s ease-in;
+    }
+
+    .temp2 {
+      grid-column: 3;
+      grid-row: 2;
       justify-self: start;
       align-self: start;
       animation: slideIn 8s ease-in;
@@ -169,32 +210,62 @@
     align-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     height: 100%;
     width: 100%;
 
     .scribe {
       grid-column: 1;
+      grid-row: 1;
       justify-self: start;
       align-self: start;
-      animation: slideIn 1s ease-in;
+      animation: slideIn 1s ease-in-out;
       animation-fill-mode: both;
     }
 
     .haul {
       grid-column: 2;
+      grid-row: 1;
       justify-self: start;
       align-self: start;
 
-      animation: slideIn 1s ease-in 1s;
+      animation: slideIn 1s ease-in-out 0.2s;
       animation-fill-mode: both;
     }
 
     .mulligan {
       grid-column: 3;
+      grid-row: 1;
       justify-self: start;
       align-self: start;
-      animation: slideIn 1s ease-in 2s;
+      animation: slideIn 1s ease-in-out 0.4s;
+      animation-fill-mode: both;
+    }
+
+    .tdb {
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: start;
+      align-self: start;
+      animation: slideIn 1s ease-in-out 0.6s;
+      animation-fill-mode: both;
+    }
+
+    .temp1 {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: start;
+      align-self: start;
+      animation: slideIn 1s ease-in-out 0.8s;
+      animation-fill-mode: both;
+    }
+
+    .temp2 {
+      grid-column: 3;
+      grid-row: 2;
+      justify-self: start;
+      align-self: start;
+      animation: slideIn 1s ease-in-out 1s;
       animation-fill-mode: both;
     }
   }

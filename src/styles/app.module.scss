@@ -28,20 +28,9 @@
   .secondBlockWrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 0.4fr 1fr;
-    grid-column: 1;
-    grid-row: 2 / 3;
-    height: 100vh;
-    width: 100%;
-    // background-color: #2e3532;
-  }
-
-  .thirdBlockWrapper {
-    display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 1fr;
     grid-column: 1;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     height: 100%;
     width: 100%;
     background-color: #0b2027;
@@ -78,20 +67,10 @@
 
     .secondBlockWrapper {
       display: grid;
-      grid-template-columns: 0.8fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-column: 1 / 5;
-      grid-row: 2 / 3;
-      height: 100vh;
-      width: 100%;
-    }
-
-    .thirdBlockWrapper {
-      display: grid;
       grid-template-columns: 0.5fr 1fr 0.5fr;
       grid-template-rows: 0.5fr 1fr;
       grid-column: 1 / 5;
-      grid-row: 3 / 4;
+      grid-row: 2 / 3;
       height: 100vh;
       width: 100%;
     }
@@ -111,21 +90,10 @@
 
   .secondBlockWrapper {
     display: grid;
-
-    grid-template-columns: 0.6fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column: 1 / 5;
-    grid-row: 2 / 3;
-    height: 100vh;
-    width: 100%;
-  }
-
-  .thirdBlockWrapper {
-    display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 0.5fr 1fr;
     grid-column: 1 / 5;
-    grid-row: 3 / 4;
+    grid-row: 2 / 3;
     height: 100vh;
     width: 100%;
   }

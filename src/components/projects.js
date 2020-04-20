@@ -24,6 +24,24 @@ const ProjectSectionRoot = () => (
         title="Mulligan"
         text="Mulligan - Ditch the scorecard and watch your progress"
       />
+      <ProjectCard
+        componentStyle={styles.tdb}
+        href="https://github.com/general-wedge/total-discord-bot"
+        title="Total Discord Bot"
+        text="Simple Discord bot builder!"
+      />
+      <ProjectCard
+        componentStyle={styles.temp1}
+        href="https://github.com/general-wedge/total-discord-bot"
+        title="Total Discord Bot"
+        text="Simple Discord bot builder!"
+      />
+      <ProjectCard
+        componentStyle={styles.temp2}
+        href="https://github.com/general-wedge/total-discord-bot"
+        title="Total Discord Bot"
+        text="Simple Discord bot builder!"
+      />
     </ProjectsWrapper>
   </>
 )

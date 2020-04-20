@@ -7,33 +7,42 @@ const BlogMetaData = ({ data }) => {
   const blogs = data.allMarkdownRemark.edges
   return (
     <>
-      {totalCount > 0
-        ? blogs.map(({ node }, i) => {
+      {totalCount > 0 ? (
+        blogs.map(({ node }, i) => {
           console.log(i)
-            return (
-              <div key={i} style={{gridRow: `${i + 1}`}} className={styles.blogSectionWrapper}>
-                <div className={styles.blog}>
-                  <h4 className={styles.blogHeaderTitle}>
-                    <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
-                  </h4>
-                  <small>{node.frontmatter.date} • time to read: {node.timeToRead} min</small>
-                  <p>{node.frontmatter.excerpt}</p>
-                </div>
+          return (
+            <div
+              key={i}
+              style={{ gridRow: `${i + 1}` }}
+              className={styles.blogSectionWrapper}
+            >
+              <div className={styles.blog}>
+                <h4 className={styles.blogHeaderTitle}>
+                  <Link to={node.frontmatter.path}>
+                    {node.frontmatter.title}
+                  </Link>
+                </h4>
+                <small>
+                  {node.frontmatter.date} • time to read: {node.timeToRead} min
+                </small>
+                <p>{node.frontmatter.excerpt}</p>
               </div>
-            )
-          })
-        :
-        <div style={{gridRow: 1}} className={styles.blogSectionWrapper}>
+            </div>
+          )
+        })
+      ) : (
+        <div style={{ gridRow: 1 }} className={styles.blogSectionWrapper}>
           <div className={styles.blog}>
-            <h4 className={styles.blogHeaderTitle}>Stay tuned! Blogs coming soon!</h4>
+            <h4 className={styles.blogHeaderTitle}>
+              Stay tuned! Blogs coming soon!
+            </h4>
             <small>TBD</small>
             <p>This area is under construction.</p>
           </div>
         </div>
-      }
+      )}
     </>
   )
-
 }
 
 const BlogWrapper = () => {
@@ -71,9 +80,7 @@ const BlogWrapper = () => {
           <div
             className={styles.blogWrapper}
             style={{
-              gridTemplateRows: `repeat(${
-                data.allMarkdownRemark.totalCount
-              }, "1fr")`,
+              gridTemplateRows: `repeat(${data.allMarkdownRemark.totalCount}, "1fr")`,
             }}
           >
             <BlogMetaData data={data} />
@@ -91,7 +98,7 @@ const BlogWrapper = () => {
 const BlogSection = () => (
   <>
     <div className={styles.blogSectionHeaderWrapper}>
-      <h3 className={styles.blogSectionHeader}>Tales From The Console</h3>
+      <h3 className={styles.blogSectionHeader}>Blog - under development :)</h3>
     </div>
     <BlogWrapper />
   </>
