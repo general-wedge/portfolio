@@ -75,22 +75,16 @@ const BlogWrapper = () => {
           }
         }
       `}
-      render={
-        data => (
-          <div
-            className={styles.blogWrapper}
-            style={{
-              gridTemplateRows: `repeat(${data.allMarkdownRemark.totalCount}, "1fr")`,
-            }}
-          >
-            <BlogMetaData data={data} />
-          </div>
-        )
-        // <BlogMetaData
-        //   title={node.frontmatter.title}
-        //   date={node.frontmatter.date}
-        //   description={node.excerpt}/>
-      }
+      render={data => (
+        <div
+          className={styles.blogWrapper}
+          style={{
+            gridTemplateRows: `repeat(${data.allMarkdownRemark.totalCount}, "1fr")`,
+          }}
+        >
+          <BlogMetaData data={data} />
+        </div>
+      )}
     />
   )
 }
