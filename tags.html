@@ -1,0 +1,35 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+description: Browse posts by tag.
+---
+<article class="page">
+  <h1 class="page-title">Tags</h1>
+
+  {% if site.tags.size > 0 %}
+    <ul class="tag-cloud">
+      {% for tag in site.tags %}
+        <li><a href="#{{ tag[0] }}">#{{ tag[0] }} <span class="tag-count">{{ tag[1].size }}</span></a></li>
+      {% endfor %}
+    </ul>
+
+    {% for tag in site.tags %}
+      <section class="tag-group" id="{{ tag[0] }}">
+        <h2 class="section-heading">#{{ tag[0] }}</h2>
+        <ul class="posts">
+          {% for post in tag[1] %}
+            <li class="post-item">
+              <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </time>
+              <a class="post-item-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  {% else %}
+    <p>No tags yet.</p>
+  {% endif %}
+</article>
