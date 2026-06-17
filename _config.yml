@@ -1,0 +1,43 @@
+# --- Site settings ---
+title: Austin Howlett
+tagline: Notes, writing, and the occasional experiment.
+description: >-
+  The personal blog of Austin Howlett — writing on software,
+  engineering, and whatever else is worth a post.
+author: Austin Howlett
+email: austinhowletttech@gmail.com
+
+# Set this to your production URL once deployed (no trailing slash).
+url: "https://www.austinhowlett.me"
+baseurl: ""
+
+# --- Build settings ---
+permalink: /blog/:year/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Default front matter so individual files stay clean.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# jekyll-feed: serve the blog feed at /feed.xml
+feed:
+  path: feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github

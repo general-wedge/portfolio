@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+---
+<section class="intro">
+  <h1 class="intro-title">{{ site.title }}</h1>
+  <p class="intro-tagline">{{ site.tagline }}</p>
+</section>
+
+<section class="post-list">
+  <h2 class="section-heading">Writing</h2>
+  {% if site.posts.size > 0 %}
+    <ul class="posts">
+      {% for post in site.posts %}
+        <li class="post-item">
+          <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%Y-%m-%d" }}
+          </time>
+          <a class="post-item-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No posts yet. Check back soon.</p>
+  {% endif %}
+</section>
