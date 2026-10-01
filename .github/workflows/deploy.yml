@@ -27,6 +27,9 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      - name: Test writing tools
+        run: bundle exec rake test
+
       - uses: actions/configure-pages@v5
         id: pages
 

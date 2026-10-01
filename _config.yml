@@ -41,3 +41,7 @@ exclude:
   - README.md
   - vendor
   - .github
+  - bin
+  - lib
+  - test
+  - Rakefile

@@ -21,3 +21,9 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gem "csv"
 gem "base64"
 gem "bigdecimal"
+
+# Tests for the writing tools in bin/ and lib/.
+group :development, :test do
+  gem "minitest", "~> 5.0"
+  gem "rake", "~> 13.0"
+end

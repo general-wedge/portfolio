@@ -4,3 +4,6 @@ _site/
 .sass-cache/
 vendor/
 .bundle/
+
+# Unpublished drafts stay local; bin/publish moves them into _posts/.
+_drafts/

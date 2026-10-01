@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+# Live preview: renders drafts with the real site styles and reloads on save.
+cd "$(dirname "$0")/.." && exec bundle exec jekyll serve --drafts --livereload "$@"
