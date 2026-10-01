@@ -45,3 +45,4 @@ exclude:
   - lib
   - test
   - Rakefile
+  - package.json

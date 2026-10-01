@@ -1,16 +1,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f0f0f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181a26" media="(prefers-color-scheme: dark)">
 
-  <!-- Roboto Mono -->
+  <!-- Apply a saved theme choice before first paint (see assets/js/theme.js). -->
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+
+  <!-- IBM Plex Sans (reading) + IBM Plex Mono (chrome) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script type="module" src="{{ '/assets/js/theme.js' | relative_url }}"></script>
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}"
         href="{{ '/feed.xml' | relative_url }}">
 

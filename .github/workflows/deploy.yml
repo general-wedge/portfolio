@@ -30,6 +30,9 @@ jobs:
       - name: Test writing tools
         run: bundle exec rake test
 
+      - name: Test site styles
+        run: npm test
+
       - uses: actions/configure-pages@v5
         id: pages
 

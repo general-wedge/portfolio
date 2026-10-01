@@ -6,8 +6,9 @@ intentionally "just files on a server."
 ## Stack
 
 - [Jekyll](https://jekyllrb.com/) (static site generator)
-- One typeface: Roboto Mono
-- Hand-written CSS, minimal JS, light/dark aware
+- IBM Plex Sans for reading, IBM Plex Mono for nav, dates, tags and code
+- Hand-written CSS ("Dusk" palette: periwinkle on a cool, softened base)
+- Light/dark follows the system, with a manual toggle in the header
 - Deployed to GitHub Pages via GitHub Actions
 
 ## Local development
@@ -22,6 +23,18 @@ bundle exec jekyll serve   # http://localhost:4000
 ```sh
 bundle exec jekyll serve --livereload
 ```
+
+## Tests
+
+Both suites live in `test/` and run in CI before every deploy:
+
+```sh
+bundle exec rake test   # writing tools (lib/blog/)
+npm test                # palette contrast + theme toggle (Node built-in runner, no installs)
+```
+
+`test/palette.test.js` reads the colours straight from `style.css` and checks
+contrast in both modes, so run it after any colour change.
 
 ## Writing a post
 
@@ -55,8 +68,6 @@ bin/publish your-title      # moves it to _posts/YYYY-MM-DD-your-title.md
 published at `/blog/:year/:title/`. Commit and push — the site rebuilds and
 deploys automatically.
 
-The tooling lives in `lib/blog/` and is tested with `bundle exec rake test`.
-
 ## Structure
 
 ```
@@ -67,8 +78,10 @@ The tooling lives in `lib/blog/` and is tested with `bundle exec rake test`.
 ├── _posts/              # blog posts (Markdown)
 ├── _drafts/             # unpublished drafts, gitignored (created by bin/new-post)
 ├── bin/                 # new-post, serve, publish
-├── lib/blog/            # code behind bin/ (tests in test/)
-├── assets/css/style.css # all styles
+├── lib/blog/            # code behind bin/
+├── test/                # Ruby tests for lib/, JS tests for styles and toggle
+├── assets/css/style.css # all styles (palette tokens at the top)
+├── assets/js/theme.js   # light/dark toggle
 ├── index.html           # landing page (post list)
 ├── about.md             # bio / experience / contact
 ├── tags.html            # tag index
