@@ -7,8 +7,11 @@ description: >-
 author: Austin Howlett
 email: austinhowletttech@gmail.com
 
-# Set this to your production URL once deployed (no trailing slash).
-url: "https://www.austinhowlett.me"
+# Where the site is served (no trailing slash). The deploy workflow replaces
+# url and baseurl with the address GitHub Pages reports, so a custom domain set
+# in the repo's Pages settings is picked up without editing this file. baseurl
+# stays empty here so local previews are served from the root.
+url: "https://general-wedge.github.io"
 baseurl: ""
 
 # --- Build settings ---
