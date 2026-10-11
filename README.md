@@ -1,7 +1,8 @@
-# austinhowlett.me
+# general-wedge.github.io/portfolio
 
-My personal blog and site. A minimal, fast, low-maintenance Jekyll site —
-intentionally "just files on a server."
+My personal blog and site, live at <https://general-wedge.github.io/portfolio/>.
+A minimal, fast, low-maintenance Jekyll site — intentionally "just files on a
+server."
 
 ## Stack
 
