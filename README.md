@@ -1,7 +1,8 @@
-# austinhowlett.me
+# general-wedge.github.io/portfolio
 
-My personal blog and site. A minimal, fast, low-maintenance Jekyll site —
-intentionally "just files on a server."
+My personal blog and site, live at <https://general-wedge.github.io/portfolio/>.
+A minimal, fast, low-maintenance Jekyll site — intentionally "just files on a
+server."
 
 ## Stack
 
@@ -68,6 +69,22 @@ bin/publish your-title      # moves it to _posts/YYYY-MM-DD-your-title.md
 published at `/blog/:year/:title/`. Commit and push — the site rebuilds and
 deploys automatically.
 
+### Diagrams
+
+A fenced code block tagged `mermaid` is drawn as a
+[Mermaid](https://mermaid.js.org/) diagram in the browser, in the site's
+colours for whichever theme is active:
+
+````markdown
+```mermaid
+flowchart LR
+  Draft --> Published
+```
+````
+
+Mermaid is loaded from a CDN, and only on pages that contain a diagram. Without
+JavaScript (and in the RSS feed) the block shows as its source.
+
 ## Structure
 
 ```
@@ -82,6 +99,7 @@ deploys automatically.
 ├── test/                # Ruby tests for lib/, JS tests for styles and toggle
 ├── assets/css/style.css # all styles (palette tokens at the top)
 ├── assets/js/theme.js   # light/dark toggle
+├── assets/js/diagrams.js # Mermaid diagrams in posts
 ├── index.html           # landing page (post list)
 ├── about.md             # bio / experience / contact
 ├── tags.html            # tag index
