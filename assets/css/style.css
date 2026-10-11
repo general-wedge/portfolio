@@ -310,6 +310,9 @@ blockquote {
 
 img { max-width: 100%; height: auto; }
 
+/* Mermaid diagrams, rendered by assets/js/diagrams.js */
+.diagram { text-align: center; overflow-x: auto; }
+
 /* Tables ------------------------------------------------------------------- */
 
 table {
