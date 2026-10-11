@@ -310,6 +310,31 @@ blockquote {
 
 img { max-width: 100%; height: auto; }
 
+/* Tables ------------------------------------------------------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+
 hr { border: none; border-top: 1px solid var(--border); margin: var(--space) 0; }
 
 /* Tags page ---------------------------------------------------------------- */
