@@ -1,7 +1,7 @@
 ---
 title: "Am I really going to ply WoW...forever?"
 date: 2026-10-18 13:08:12 -0400
-tags: [:musings, :gaming, :opinion]
+tags: [musings, gaming, opinion]
 description: "Blizzard won't let us go, now they want us forever"
 ---
 
