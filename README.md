@@ -30,7 +30,7 @@ bundle exec jekyll serve --livereload
 Both suites live in `test/` and run in CI before every deploy:
 
 ```sh
-bundle exec rake test   # writing tools (lib/blog/)
+bundle exec rake test   # writing tools and build plugins (lib/blog/)
 npm test                # palette contrast + theme toggle (Node built-in runner, no installs)
 ```
 
@@ -69,6 +69,21 @@ bin/publish your-title      # moves it to _posts/YYYY-MM-DD-your-title.md
 published at `/blog/:year/:title/`. Commit and push — the site rebuilds and
 deploys automatically.
 
+### Images
+
+Put image files under `assets/images/<post-slug>/` and reference them from the
+site root:
+
+```markdown
+![What the image shows](/assets/images/your-title/screenshot.png)
+```
+
+The live site is served under `/portfolio/`; a small plugin
+(`_plugins/root_relative_paths.rb`) adds that prefix to root-relative images and
+links in posts and pages at build time, so the same path works in `bin/serve`
+and in production. Resize large images before committing (about 1600px wide is
+plenty).
+
 ### Diagrams
 
 A fenced code block tagged `mermaid` is drawn as a
@@ -92,10 +107,11 @@ JavaScript (and in the RSS feed) the block shows as its source.
 ├── _config.yml          # site settings
 ├── _layouts/            # default, page, post
 ├── _includes/           # head, header, footer
+├── _plugins/            # build-time fixes (root-relative paths)
 ├── _posts/              # blog posts (Markdown)
 ├── _drafts/             # unpublished drafts, gitignored (created by bin/new-post)
 ├── bin/                 # new-post, serve, publish
-├── lib/blog/            # code behind bin/
+├── lib/blog/            # code behind bin/ and _plugins/
 ├── test/                # Ruby tests for lib/, JS tests for styles and toggle
 ├── assets/css/style.css # all styles (palette tokens at the top)
 ├── assets/js/theme.js   # light/dark toggle
